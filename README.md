@@ -78,10 +78,6 @@ $ export SECRET_KEY=secret
 $ flask run
 ```
 
-### Author
-
-- Joie Angelo T. Llantero
-
 ### Resources
 
 - Image from Freepik.com
