@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+{% endblock %}
+
+{% block body %}
+    <form class="text-center border border-light p-5 centerize" style="width: 400px;" action="/signin" method="post">
+        <p class="h4 mb-4">Sign in</p>
+        <p class="mb-3">Let's get started!</p>
+        <input type="text" id="username" name="username" class="form-control mb-4" placeholder="Enter your username" autofocus aria-describedby="userHelp" required>
+        <small id="userHelp" class="form-text text-muted">This username will serve as your display name on the channels.</small>
+        <button class="btn btn-primary btn-block my-4 button-primary" type="submit">Sign in</button>
+    </form>
+{% endblock %}

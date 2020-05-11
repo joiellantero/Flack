@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+click = "==7.1.2"
+flask-socketio = "==4.3.0"
+itsdangerous = "==1.1.0"
+python-engineio = "==3.12.1"
+python-socketio = "==4.5.1"
+six = "==1.14.0"
+Flask = "==1.1.2"
+Flask-Session = "==0.3.1"
+Jinja2 = "==2.11.2"
+MarkupSafe = "==1.1.1"
+Werkzeug = "==1.0.1"
+
+[requires]
+python_version = "2.7"

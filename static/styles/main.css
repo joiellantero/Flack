@@ -1,0 +1,110 @@
+html{
+    font-style: Helvetica;
+}
+
+footer > p {
+    font-size: 13px;
+    padding: 50px;
+    color: #cbcbcb;
+}
+
+footer{
+    clear: both;
+    position: relative;
+    margin: 50px 0 50px 0;
+}
+
+nav{
+    margin: 0 0 50px 0;
+}
+
+.jumbotron{
+    margin: -50px auto;
+}
+
+h1{
+    font-weight: 600;
+}
+
+a:hover, 
+a:visited, 
+a:link, 
+a:active{
+  text-decoration: none;
+}
+
+.nav-link{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-transparent {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.button-primary{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.centerize {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.link{
+    color: #cbcbcb;
+}
+
+.link:hover{
+    color: #9f9f9f;
+}
+
+.dropdown-item, 
+.logout-button{
+    text-align: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* 404 page */
+
+.img-404, 
+.img-403{
+  width: 500px;
+  height: auto;
+}
+
+.img-404,
+.go-back-btn{
+  display: block;
+  margin: 0 auto 50px auto;
+}
+
+.nav-link-text {
+    display: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .nav-link-text {
+        display: inline;
+    }
+}
+
+.chat{
+    display: inline;
+}
+

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Welcome to Flack, {{ username }}.
+{% endblock %}
+
+{% block body %}
+    <form class="text-center border border-light p-5 centerize mt-5" style="width: 450px;" action="/create_channel" method="post">
+        <p>Create a channel</p>
+        <input type="text" id="channel" name="channel" class="form-control mb-4" placeholder="Channel Name" autofocus required>
+        <button class="btn btn-primary button-primary" type="submit">CREATE</button>
+    </form>
+
+    <script>
+        if (localStorage.getItem('last_channel')) {
+            let channel = localStorage.getItem('last_channel');    
+            window.location.replace('/channels/' + channel);   
+        }
+    </script>
+{% endblock %} 

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Page Not Found
+{% endblock %}
+
+{% block body %}
+    <!-- image taken from freepik.com -->
+    <div class="img-404-container">
+        <img src="{{url_for('static', filename='images/404.png')}}" class="img-404">
+        <a href="javascript:history.go(-1)">
+            <button type="button" class="btn btn-light go-back-btn button-primary">GO BACK</button>
+        </a>
+    </div>
+    
+{% endblock %}

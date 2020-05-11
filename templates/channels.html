@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <script src="../static/js/channel.js"></script>
+{% endblock %}
+
+{% block heading %}
+  {{ session.current_channel }}
+{% endblock %}
+
+{% block body %}
+  <div class="container my-4">
+    <div class="border border-light p-5 ml-auto mr-auto" style="width: 800px;">
+      <ul class="list-unstyled">
+        <div id="chat" class="mb-2">
+          {%- if messages -%} 
+              <span style="color: grey;">
+                {%- for message in messages -%}
+                    {{ message[0] }} - [{{ message[1] }}]: {{ message [2] }} {{'\n'}} <br>
+                {%- endfor -%}
+              </span>
+          {%- endif -%}
+        </div>
+        <li class="white">
+          <div class="form-group basic-textarea">
+            <input class="form-control pl-2 my-0" id="message-textbox" rows="3" placeholder="Write a message..."></input>
+          </div>
+        </li>
+          <button type="button" class="btn btn-danger btn-sm waves-effect waves-light float-right" data-toggle="modal" data-target="#confirmLeaveModal">LEAVE</button>
+          <button id="send-button" type="button" class="btn btn-primary btn-sm waves-effect waves-light float-right">SEND</button>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="confirmLeaveModal" tabindex="-1" role="dialog" aria-labelledby="confirmLeaveModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">Are you sure?</p>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+          <i class="fas fa-times fa-4x animated rotateIn"></i>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer flex-center">
+          <a id="leave-channel" class="btn btn-outline-danger">Yes</a>
+          <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+{% endblock %}

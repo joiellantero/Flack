@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <script src="../static/js/message.js"></script>
+{% endblock %}
+
+{% block heading %}
+    alert.
+{% endblock %}
+
+{% block body %}
+  <div class="container my-4">
+    <div class="border border-light p-5 ml-auto mr-auto" style="width: 800px;">
+      <ul class="list-unstyled">
+          Recipient: <b id="recipient" class="mb-2"> {{ session.recipient }} </b> <br>
+          Sender:  <b id="sender"> {{ username }} </b>
+
+          <li class="white">
+            <div class="form-group basic-textarea">
+              <input type="text" class="form-control" id="alert-message" placeholder="Write a message..."></input>
+            </div>
+          </li>
+
+          <button id="send-username" type="button" class="btn btn-primary btn-sm waves-effect waves-light float-right" data-toggle="modal" data-target="#centralModalWarning">SEND</button>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Central Modal Medium Warning -->
+  <div class="modal fade" id="centralModalWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Confirm Send</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>Are you sure you want to send {{ session.recipient }} this alert message?</p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a id="send-alert-message" type="button" class="btn btn-warning" data-dismiss="modal">Send</a>
+        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+  </div>
+  <!-- Central Modal Medium Warning-->
+{% endblock %}
