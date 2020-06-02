@@ -2,7 +2,7 @@
 
 # Flack
 
-> A simple chatroom utilizing HTML, CSS, Javascript and Socket.IO. This project was made for CS50W - Project 2
+> A simple chatroom utilizing HTML, CSS, Javascript and Socket.IO. This project was made for CS50W.
 
 ## Usage
 
@@ -69,7 +69,7 @@ $ pip3 install -r requirements.txt
 ```shell
 $ export FLASK_APP=application.py
 $ export FLASK_ENV=development
-$ export SECRET_KEY=secret
+$ export SECRET_KEY="secret"
 ```
 
 > Run flask
