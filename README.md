@@ -1,6 +1,6 @@
 # Flack
 
-> A simple chatroom utilizing HTML, CSS, Javascript and Socket.IO. This project was made for CS50W.
+> A simple chatroom utilizing HTML, CSS, Javascript and Socket.IO. This project was made with Flask for CS50W.
 
 ## Usage
 
