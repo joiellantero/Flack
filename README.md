@@ -1,5 +1,3 @@
-<img src="static/images/Signin.png" title="signin" alt="signin"></a>
-
 # Flack
 
 > A simple chatroom utilizing HTML, CSS, Javascript and Socket.IO. This project was made for CS50W.
